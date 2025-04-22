@@ -1,192 +1,324 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman Yadav | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRNXf0zTJS3D2/5pT6ME+J8o1cHzs3PDAA5Gz8QG2FEKX+TcFblKKC0KSmD6hzYQ9S1M48A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom right, #111827, #1f2937);
-            margin: 0;
-            padding: 0;
-            color: #e5e7eb;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px 20px;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .profile-pic {
-            width: 140px;
-            height: 140px;
-            background: #4b5563;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            color: #9ca3af;
-        }
-        .links a {
-            margin: 0 15px;
-            color: #60a5fa;
-            text-decoration: none;
-            font-size: 1.3rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-        .block {
-            margin-bottom: 50px;
-        }
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #93c5fd;
-        }
-        .image-placeholder {
-            width: 100%;
-            height: 180px;
-            background: #374151;
-            border-radius: 10px;
-            margin: 15px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-style: italic;
-            color: #9ca3af;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .download-link {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #3b82f6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-        .download-link:hover {
-            background: #2563eb;
-        }
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            background: #111827;
-            color: #9ca3af;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Yadav | ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #3B82F6;
+      --secondary: #10B981;
+      --accent: #8B5CF6;
+      --dark: #0F172A;
+      --text: #E2E8F0;
+    }
+
+    body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(45deg, #1E293B, #0F172A);
+      position: relative;
+    }
+
+    .download-top {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .profile-container {
+      width: 200px;
+      height: 200px;
+      margin: 2rem auto;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      padding: 5px;
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .social-links {
+      margin: 1rem 0 2rem;
+    }
+
+    .social-links a {
+      margin: 0 15px;
+      font-size: 2rem;
+      color: var(--primary);
+      transition: transform 0.2s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
+
+    .section {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 3rem 2rem;
+      background: #1E293B;
+      border-radius: 15px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      padding: 1.5rem;
+      background: #0F172A;
+      border-radius: 10px;
+      border: 1px solid #334155;
+    }
+
+    .project-card {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #0F172A;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .project-image-placeholder {
+      width: 100%;
+      height: 180px;
+      background: #334155;
+      border-radius: 10px;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: #94a3b8;
+    }
+
+    .certificate-badge {
+  transition: transform 0.2s ease-in-out;
+
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid var(--primary);
+      border-radius: 30px;
+    }
+
+    .certificate-image-placeholder {
+      width: 100%;
+      height: 180px;
+      background: #334155;
+      border-radius: 10px;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: italic;
+      color: #94a3b8;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 3rem;
+      margin: 3rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+
+    .button {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
+}
+
+.certificate-badge:hover {
+  transform: scale(1.1);
+  background: rgba(59, 130, 246, 0.2);
+  cursor: pointer;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-    <header>
-        <h1>Aman Yadav</h1>
-        <p>Machine Learning Engineer</p>
-        <div class="profile-pic">
-            <img src="profile.jpg" alt="Aman Yadav" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-        </div>
-        
-        <div class="links">
-            <a href="https://www.linkedin.com/in/aman-yadav-753590251" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Aman-Yadav-PY" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    </header>
+  <section class="hero">
+    <div class="download-top">
+      <a href="Aman Yadav ML cv.pdf" class="button" download>Download Resume</a>
+    </div>
+    <div class="profile-container">
+      <img src="profile.jpg" class="profile-pic" alt="Aman Yadav">
+    </div>
+    <h1>Aman Yadav</h1>
+    <p>Machine Learning Engineer</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/aman-yadav-753590251" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Aman-Yadav-PY" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:amanyadav.37566@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+  <section class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      I'm Aman Yadav, a Computer Science Engineering student specializing in Machine Learning.
+      With a passion for building intelligent systems, I leverage tools like Python, TensorFlow,
+      and PyTorch to develop real-world applications. I'm currently pursuing my B.Tech at Lovely
+      Professional University and constantly exploring innovative solutions through data and code.
+    </p>
+  </section>
+  <!-- Existing content omitted for brevity -->
 
-    <div class="container">
-        <div class="block">
-            <h2>About Me</h2>
-            <p>
-                I'm Aman Yadav, a Computer Science Engineering student passionate
-                about Machine Learning and Aritficial Intelligence. I enjoy building
-                real-world solutions using tools like Python, TensorFlow, PyTorch,
-                and OpenCV. With hands-on project experience and a strong foundation
-                in algorithms and data structures, I thrive on solving complex problems
-                and learning new technologies. I'm currently pursuing my B.Tech at 
-                Lovely Professional University and actively seeking opportunities to 
-                grow as a developer and innovator.
-            </p>
-        </div>
-
-        <div class="block">
-            <h2>Skills</h2>
-            <p><strong>Languages:</strong> Python, Java, JavaScript, Swift, C++</p>
-            <p><strong>Frameworks:</strong> Tensorflow, Pytorch, HTML, CSS</p>
-            <p><strong>Tools:</strong> MySQL, MongoDB, OpenCV, Pandas</p>
-            <p><strong>Soft Skills:</strong> Leadership, Problem-Solving, Team Player, Adaptability, Critical Thinking</p>
-            <div class="image-placeholder">Add an image showing your skillset or workflow</div>
-        </div>
-
-        <div class="block">
-            <h2>Projects</h2>
-            <div>
-                <p><strong>Emotion Detector</strong> – Facial recognition using Pytorch and OpenCV</p>
-                <div class="image-placeholder">Project image placeholder</div>
-            </div>
-            <div>
-                <p><strong>Sentiment Analysis</strong> – NLP with TensorFlow and NLTK on Twitter data</p>
-                <div class="image-placeholder">Project image placeholder</div>
-            </div>
-            <div>
-                <p><strong>Anomaly Detection</strong> – BigMart dataset using Isolation Forest</p>
-                <div class="image-placeholder">Project image placeholder</div>
-            </div>
-        </div>
-
-        <div class="block">
-            <h2>Certificates</h2>
-            <ul>
-                <li>AI Foundation - IBM SkillBuild</li>
-                <li>Machine Learning - Intel</li>
-                <li>SoloLearn certifications in Python Core, SQL, C, C++</li>
-            </ul>
-            <div class="image-placeholder">Add snapshots of your certificates</div>
-        </div>
-
-        <div class="block">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Campus Ambassador - Coding Blocks</li>
-                <li>NCC B Certificate Holder</li>
-                <li>EthGlobal Hackathon Participant</li>
-            </ul>
-        </div>
-
-        <div class="block">
-            <h2>Education</h2>
-            <p><strong>B.Tech CSE</strong> - Lovely Professional University (CGPA: 6.73)</p>
-            <p><strong>Intermediate</strong> - Army Public School, Jalandhar Cantt (94.2%)</p>
-            <p><strong>Matriculation</strong> - Army Public School, Jalandhar Cantt (94.4%)</p>
-        </div>
-
-        <div class="block">
-            <h2>Download Resume</h2>
-            <a class="download-link" href="Aman Yadav ML cv.pdf" download>Download My Resume</a>
-        </div>
-
-        <div class="block">
-            
-
-            <h2>Contact Me</h2>
-            <p><strong>Email:</strong> amanyadav.37566@gmail.com</p>
-            <p><strong>Phone:</strong> +91-7743010604</p>
-        </div>
-
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="project-card" data-aos="fade-up">
+      <h3>Emotion Detector – Face Recognition</h3>
+      <ul>
+        <li>Fetching grayscale facial images from Kaggle</li>
+        <li>Training PyTorch neural network on labeled expressions: sad, angry, happy, neutral</li>
+        <li>Using OpenCV to retrieve live facial expressions</li>
+        <li>Flask-based web application</li>
+      </ul>
+      <div class="tech-stack">
+        <span class="certificate-badge">Python</span>
+        <span class="certificate-badge">OpenCV</span>
+        <span class="certificate-badge">PyTorch</span>
+        <span class="certificate-badge">Pandas</span>
+        <span class="certificate-badge">Flask</span>
+      </div>
+      <div class="project-image-placeholder">Project Image Placeholder</div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Aman Yadav. All Rights Reserved.</p>
-    </footer>
+    <div class="project-card">
+      <h3>Sentiment Analysis – NLP</h3>
+      <ul>
+        <li>Training TensorFlow model using Twitter data</li>
+        <li>Using NLTK for natural language processing and text preprocessing</li>
+      </ul>
+      <div class="tech-stack">
+        <span class="certificate-badge">TensorFlow</span>
+        <span class="certificate-badge">NLTK</span>
+        <span class="certificate-badge">Pandas</span>
+      </div>
+      <div class="project-image-placeholder">Project Image Placeholder</div>
+    </div>
+
+    <div class="project-card">
+      <h3>Anomaly Detection – BigMart Dataset</h3>
+      <ul>
+        <li>Used IsolationForest to detect anomalies in large datasets</li>
+        <li>Focused on divergence from regularity using real-world datasets</li>
+      </ul>
+      <div class="tech-stack">
+        <span class="certificate-badge">Scikit Learn</span>
+        <span class="certificate-badge">TensorFlow</span>
+        <span class="certificate-badge">Matplotlib</span>
+        <span class="certificate-badge">Pandas</span>
+      </div>
+      <div class="project-image-placeholder">Project Image Placeholder</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Certificates</h2>
+    <div class="achievements">
+      <div class="certificate-badge">AI Foundation – IBM Skill Build (Jan 2024 - Feb 2024)</div>
+      <div class="certificate-badge">Machine Learning – Intel (Mar 2024 - Apr 2024)</div>
+      <div class="certificate-badge">Python Core – SoloLearn (Jan 2023 - Jun 2023)</div>
+      <div class="certificate-badge">SQL – SoloLearn</div>
+      <div class="certificate-badge">C Fundamentals – SoloLearn</div>
+      <div class="certificate-badge">C++ – SoloLearn</div>
+    </div>
+    <div class="certificate-image-placeholder">Certificate Image Placeholder</div>
+  </section>
+
+  <section class="section">
+    <h2>Courses</h2>
+    <div class="project-card">
+      <h3>DSA Self-Placed Course – Geeks for Geeks (Jun 2024 - Aug 2024)</h3>
+      <ul>
+        <li>Learned Data Structures: String, Array, Linked-List, Tree, Graph</li>
+        <li>Practiced algorithms for problem-solving</li>
+        <li>Applied recursion, sliding window, two-pointer techniques</li>
+        <li>Studied Greedy, Backtracking, and Dynamic Programming</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up">
+        <h3>Lovely Professional University (2022 - Present)</h3>
+        <p>B.Tech in Computer Science - CGPA: 6.55</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Army Public School, Jalandhar Cantt (2022)</h3>
+        <p>Intermediate - 94.2%</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Army Public School, Jalandhar Cantt (2020)</h3>
+        <p>Matriculation - 94.2%</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Achievements</h2>
+    <div class="achievements">
+      <div class="certificate-badge">Campus Ambassador – Coding Blocks</div>
+      <div class="certificate-badge">NCC B Certificate Holder</div>
+      <div class="certificate-badge">EthGlobal Hackathon Participant</div>
+    </div>
+  </section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true });</script>
+  <footer class="section" style="text-align: center; font-size: 1rem; background: #0F172A; color: #94a3b8; padding: 2rem 1rem;">
+    <p>Contact me at: <strong>+91 7743010604</strong></p>
+    <p>&copy; 2025 Aman Yadav. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
