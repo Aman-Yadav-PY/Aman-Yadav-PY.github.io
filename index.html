@@ -347,6 +347,57 @@
 
 
 
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .project-card, .skill-grid {
+    flex-direction: column;
+  }
+
+  .project-card img, .project-image-placeholder {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card {
+    flex-wrap: wrap;
+  }
+
+  .download-top {
+    position: static;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .image-container {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .centered-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
 </style>
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
@@ -748,7 +799,7 @@
   
   </section>
 
-  <section class="section">
+  <section class="section" data-aos="fade-up">
     <h2>Courses</h2>
     <div class="project-card">
       <h3>DSA Self-Placed Course – Geeks for Geeks (Jun 2024 - Aug 2024)</h3>
@@ -759,7 +810,7 @@
         <li>Studied Greedy, Backtracking, and Dynamic Programming</li>
       </ul>
       <div class="image-container">
-        <img src="images/certificates.png" alt="Description" class="centered-image" style="width: 90vh;height:65vh;">
+        <img src="images/certificates.png" alt="Course Certificate" class="centered-image">
       </div>
       
     </div>
