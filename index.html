@@ -25,6 +25,16 @@
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar but keep scroll functionality */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
 .hero {
   position: relative;
   text-align: center;
@@ -236,14 +246,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh; /* Optional: to center vertically on full screen */
+  padding: 1rem;
+  width: 100%;
 }
 
 .centered-image {
-  width: 200px;  /* Set width */
-  height: 150px; /* Set height */
-  object-fit: cover; /* Optional: keeps the aspect ratio visually nice */
+  width: 100px;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
+
 
 .skill-grid {
       display: grid;
@@ -374,15 +388,7 @@
     margin-bottom: 1rem;
   }
 
-  .image-container {
-    height: auto;
-    padding: 1rem;
-  }
 
-  .centered-image {
-    width: 100%;
-    height: auto;
-  }
 
   .profile-container {
     width: 150px;
@@ -455,7 +461,7 @@
       </div>
       <div class="skill-card">
         <h3>Soft Skills</h3>
-        <p>Strategic Thinker, Creative, Visionary, Self-Desciplined, Analytical Thinker</p>
+        <p>Strategic Thinker, Creative, Visionary, Self-Desciplined, Analytical Skills</p>
       </div>
     </div>
   </section>
@@ -790,14 +796,17 @@
   <section class="section">
     <h2>Certificates</h2>
     <div class="achievements">
-      <div class="certificate-badge">AI Foundation – IBM Skill Build (Jan 2024 - Feb 2024)</div>
+      <div class="certificate-badge" ><a href="https://students.yourlearning.ibm.com/activity/PLAN-B2125F145F0E" target="_blank" style="color: white;text-decoration: none;">AI Foundation – IBM Skill Build (Jan 2024 - Feb 2024)</a></div>
       <div class="certificate-badge">Machine Learning – Intel (Mar 2024 - Apr 2024)</div>
-      <div class="certificate-badge">Python Core – SoloLearn (Jan 2023 - Jun 2023)</div>
-      <div class="certificate-badge">SQL – SoloLearn</div>
-      <div class="certificate-badge">C Fundamentals – SoloLearn</div>
-      <div class="certificate-badge">C++ – SoloLearn</div>
+      <div class="certificate-badge"><a href="https://www.sololearn.com/certificates/CT-B0WAK4ZL" target="_blank" style="color: white;text-decoration: none;">
+        Python Core – SoloLearn (Jan 2023 - Jun 2023)</a></div>
+      <div class="certificate-badge"><a href="https://www.sololearn.com/certificates/CT-2RHRTZVG" target="_blank" style="color: white;text-decoration: none;">
+        SQL – SoloLearn</a></div>
+      <div class="certificate-badge"><a href="https://www.sololearn.com/certificates/CC-CL784SG7" target="_blank" style="color: white;text-decoration: none;">
+        Introduction to C – SoloLearn</a></div>
+      <div class="certificate-badge"><a href="https://www.sololearn.com/certificates/CC-NH79BMXM" target="_blank" style="color: white;text-decoration: none;">
+      C++ Intermediate– SoloLearn</a></div>
     </div>
-  
   </section>
 
   <section class="section" data-aos="fade-up">
